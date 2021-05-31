@@ -43,9 +43,14 @@ app.get('/pig', (req, res) => {
 
 
 app.use((req, res) => {
-    if (req.url === '/block-url') {
-      return res.sendStatus(204);
+    if (req.url === '/block-url') {         //blocking url you do not want user to be able
+      return res.sendStatus(204);           //to navigate to. In this case: /block-url
     }
+
+    if (req.url === '/dont-go-here') {
+        return res.sendStatus(204);       
+    }
+
     res.status(404).send('Not Found!');
   });
 
