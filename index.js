@@ -26,16 +26,16 @@ app.get('/dog', (req, res) => {
 })
 
 
-app.use(rewrite('/1', '/cat')); //example to show if you wanted to orgainize pages
-                                //by index instead of by page in this case index 1
+app.use(rewrite('/1', '/cat')); 
+                               
 
 app.get('/cat', (req, res) => {
     res.sendFile(__dirname + '/client/cat.html');
 })
 
 
-app.use(rewrite('/2', '/pig')); //example to show if you wanted to orgainize pages
-                                //by index instead of by page in this case index 2
+app.use(rewrite('/2', '/pig')); 
+                                
 
 app.get('/pig', (req, res) => {
     res.sendFile(__dirname + '/client/pig.html');
