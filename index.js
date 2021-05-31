@@ -51,7 +51,7 @@ app.use((req, res) => {
         return res.sendStatus(204);       
     }
 
-    res.status(404).send('Not Found!');
+    res.status(404).sendFile(__dirname + '/client/notfound.html');
   });
 
 
